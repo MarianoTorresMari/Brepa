@@ -18,7 +18,7 @@ export default function Home() {
         scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-3">
+          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center space-x-3 cursor-pointer">
             <img src="/lavanda.png" alt="BREPA" className="w-10 h-10 object-contain" />
             <span className="text-2xl font-light tracking-wider text-slate-700">BREPA</span>
           </a>
@@ -138,16 +138,60 @@ export default function Home() {
             Nuestros Productos
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {/* Aquí puedes agregar tus imágenes */}
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
-            <div className="aspect-square rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Imagen 1 - Toalla con flores coloridas */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/toalla-flores-1.jpg.jpeg" 
+                alt="Toalla con bordado de flores coloridas" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Imagen 2 - Toalla con flores azules */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/toalla-flores-2.jpg.jpeg" 
+                alt="Toalla con bordado de flores azules" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Imagen 3 - Camino de mesa */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/camino-mesa.jpg.jpeg" 
+                alt="Camino de mesa en lino natural" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Imagen 4 - Almohadones rayas púrpura */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/almohadones-rayas.jpg.jpeg" 
+                alt="Almohadones con rayas púrpura" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Imagen 5 - Almohadones patrón geométrico */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/almohadones-geometricos.jpg.jpeg" 
+                alt="Almohadones con patrón geométrico" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Imagen 6 - Almohadones hojas tropicales */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+              <img 
+                src="/productos/almohadones-hojas.jpg.jpeg" 
+                alt="Almohadones con diseño de hojas tropicales" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
